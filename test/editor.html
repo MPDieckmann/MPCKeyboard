@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MPCKeyboard</title>
+  <link rel="stylesheet" href="../css/mpc-keyboard.css" />
+  <link rel="stylesheet" href="css/mpc-form.css" />
+  <link rel="stylesheet" href="css/test.css" />
+</head>
+
+<body>
+  <details class="label label-details" id="options">
+    <summary class="labeltitle">Optionen</summary>
+    <form method="GET" id="options-grid" class="grid"></form>
+  </details>
+    <label class="label label-title label-iframe">
+      <span class="labeltitle">iFrame Content</span>
+      <iframe class="labelcontent" src="about:blank" onload="this.contentDocument.designMode='on';"></iframe>
+    </label>
+  </details>
+  <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
+  <script src="../js/mpckeyboard.js?201910251717"></script>
+  <script src="js/options.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>

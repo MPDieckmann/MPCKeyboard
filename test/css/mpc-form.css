@@ -1,0 +1,189 @@
+.label {
+  display: block;
+  border: 2px solid;
+  border-radius: 0.25em;
+  margin: 0.5em;
+  padding: 0.25em;
+  position: relative;
+  background: #fff;
+  font-family: "Open Sans", Roboto, Calibri, Arial, Helvetica, sans-serif;
+  cursor: text;
+  transition: all 0.3s;
+}
+
+.label:hover,
+.label:focus-within {
+  color: #08f;
+}
+
+.label.label-title {
+  padding-top: 0.75em;
+}
+
+.labelhint {
+  display: block;
+  margin: 0;
+  color: #888;
+  font-size: 0.8em;
+  border-top: 1px solid;
+  margin-top: 0.25em;
+  padding-top: 0.25em;
+}
+
+.label:hover>.labelhint,
+.label:focus-within>.labelhint {
+  border-color: #08f;
+}
+
+.label.label-title>.labeltitle,
+.label.label-details[open]>.labeltitle {
+  display: inline-block;
+  position: absolute;
+  top: -0.5em;
+  left: 0.25em;
+  background: inherit;
+  font-size: 0.9em;
+  padding: 0 0.125em;
+  border-radius: 0.25em;
+  color: inherit;
+}
+
+.label.label-details {
+  cursor: default;
+  width: auto;
+}
+
+.label.label-details>.labeltitle,
+.label.label-details[open]>.labeltitle {
+  outline: none;
+  background: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.label.label-details:hover,
+.label.label-details:focus-within {
+  color: initial;
+  border-color: #08f;
+}
+
+.label.label-details:hover>.labeltitle,
+.label.label-details:focus-within>.labeltitle {
+  color: #08f;
+}
+
+.label>input.labelcontent {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  font: inherit;
+  outline: none;
+  color: #000;
+  text-align: left;
+  overflow: auto;
+  height: 1.25em;
+}
+
+.label.label-checkbox,
+.label.label-radio {
+  border: none;
+  padding: 0.25em 0.25em 0.25em 1.5em;
+  user-select: none;
+  cursor: pointer;
+}
+
+.label.label-checkbox>.labelhint,
+.label.label-radio>.labelhint {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.label.label-checkbox>input[type="checkbox"],
+.label.label-radio>input[type="radio"] {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  min-height: 0;
+}
+
+.label.label-checkbox>.labeltitle,
+.label.label-radio>.labeltitle {
+  padding: 0;
+  position: static;
+  display: inline-block;
+  font-size: 1em;
+  text-indent: -1.5em;
+}
+
+.label.label-checkbox>.labeltitle::before,
+.label.label-radio>.labeltitle::before {
+  content: "\00a0";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid;
+  font-size: 1em;
+  line-height: 1em;
+  border-radius: 0.25em;
+  text-indent: 0;
+  text-align: center;
+  margin: 0 0.25em 0 0;
+  vertical-align: baseline;
+}
+
+.label.label-radio>.labeltitle::before {
+  border-radius: 1em;
+  font-size: 1em;
+}
+
+.label.label-checkbox:active>.labeltitle::before,
+.label.label-radio:active>.labeltitle::before {
+  background: #08f;
+}
+
+.label.label-checkbox>input[type="checkbox"]:checked+.labeltitle::before {
+  content: "\2714";
+}
+
+.label.label-radio>input[type="radio"]:checked+.labeltitle::before {
+  content: "\25cf";
+}
+
+.label.label-textarea>.labelcontent,
+.label.label-contenteditable>.labelcontent,
+.label.label-iframe>.labelcontent {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  font: inherit;
+  color: #000;
+  text-align: left;
+  height: 150px;
+  resize: vertical;
+  overflow: auto;
+  overflow-y: scroll;
+  outline: none;
+}
+
+.label.label-submit {
+  background: #08f;
+  cursor: pointer;
+}
+
+.label.label-submit>.labelcontent {
+  overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "mpckeyboard",
+  "description": "Keyboard written in TypeScript",
+  "authors": "MPDieckmann",
+  "version": "2019.10.20",
+  "main": "ts/mpckeyboard.init.ts",
+  "dependencies": {
+    "@types/jquery": "^3.3.31",
+    "jquery": "^3.4.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "keyboard",
+    "mpc",
+    "js",
+    "ts",
+    "typescript",
+    "javascript",
+    "js-keyboard",
+    "ts-keyboard"
+  ],
+  "author": "MPDieckmann",
+  "license": "GPL-3.0"
+}
