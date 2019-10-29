@@ -1,5 +1,6 @@
 # MPCKeyboard
 MPCKeyboard powered by MPDieckmann
 
-[Test file with multiple ways for testing](https://mpdieckmann.github.io/MPCKeyboard/test)
-[Very simple editor for testing](https://mpdieckmann.github.io/MPCKeyboard/test/editor)
+## Navigation
+ - Simple tool for testing all features [test/](https://mpdieckmann.github.io/MPCKeyboard/test)
+ - Very simple editor for text edit testing [test/editor](https://mpdieckmann.github.io/MPCKeyboard/test/editor)
