@@ -539,7 +539,7 @@ declare namespace MPCKeyboard.Theme {
     const element: Element;
 }
 declare namespace MPCKeyboard.Layout {
-    const version = "2019.10.24";
+    const version = "2020.02.22";
     const element: Element;
     const style: HTMLElement;
     const keys: {
@@ -594,15 +594,21 @@ declare namespace MPCKeyboard.Layout {
         [code in C]?: KeyboardKey;
     };
     class MPCKeyElement extends Element {
-        readonly code: string;
-        size: string;
-        location: KEY_LOCATION;
-        feature: string;
-        label: string;
-        key: string;
+        get code(): string;
+        get size(): string;
+        set size(value: string);
+        get location(): KEY_LOCATION;
+        set location(value: KEY_LOCATION);
+        get feature(): string;
+        set feature(value: string);
+        get label(): string;
+        set label(value: string);
+        get key(): string;
+        set key(value: string);
     }
     class MPCSpanElement extends Element {
-        size: string;
+        get size(): string;
+        set size(value: string);
     }
     function getMPCKeyElementsByKey(key: string, getFirstOnly?: false): MPCKeyElement[];
     function getMPCKeyElementsByKey(key: string, getFirstOnly: true): MPCKeyElement | null;
@@ -633,7 +639,7 @@ declare namespace MPCKeyboard.Layout {
     }>(key: T): T;
 }
 declare namespace MPCKeyboard.Menu {
-    const version = "2019.10.21";
+    const version = "2020.02.22";
     const element: Element;
     interface Menuitem {
         media?: {

@@ -2,9 +2,21 @@
 /// <reference path="../main.ts" />
 
 namespace MPCKeyboard.Menu {
-  export const version = "2019.10.21";
+  export const version = "2020.02.22";
   export const element = Helper.createMPCElement("mpc:menus");
-  element.addEventListener("click", event => {
+  element.addEventListener("mousedown", event => {
+    event.preventDefault();
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  });
+  element.addEventListener("touchstart", event => {
+    event.preventDefault();
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  });
+  element.addEventListener("pointerdown", event => {
     event.preventDefault();
     while (element.firstChild) {
       element.removeChild(element.firstChild);
@@ -75,7 +87,15 @@ namespace MPCKeyboard.Menu {
   }
   function createMenuItem(menuitem: Menuitem) {
     let element = Helper.createMPCElement("mpc:menuitem");
-    element.addEventListener("click", event => {
+    element.addEventListener("mousedown", event => {
+      event.preventDefault();
+      menuitem.onclick();
+    });
+    element.addEventListener("touchstart", event => {
+      event.preventDefault();
+      menuitem.onclick();
+    });
+    element.addEventListener("pointerdown", event => {
       event.preventDefault();
       menuitem.onclick();
     });

@@ -1,0 +1,97 @@
+{
+  "Keys": {
+    "Alt": [
+      "Alt",
+      "⌥"
+    ],
+    "ArrowDown": "\u23f7",
+    "ArrowLeft": "\u23f4",
+    "ArrowRight": "\u23f5",
+    "ArrowUp": "\u23f6",
+    "Backspace": [
+      "\u232b",
+      "↤",
+      "⌫"
+    ],
+    "CapsLock": [
+      "\u21ea",
+      "\u21eb",
+      "⇩"
+    ],
+    "Compose": "\u2384",
+    "Delete": [
+      "Del",
+      "\u2326"
+    ],
+    "Enter": [
+      "\u23ce",
+      "\u21b5",
+      "↵",
+      "↩",
+      "⏎",
+      "⌤"
+    ],
+    "Escape": "\u238B",
+    "Menu": "\u2263",
+    "Meta": "\u2318",
+    "NumLock": "\ud83d\udd22",
+    "Shift": [
+      "\u21e7",
+      "⇧"
+    ],
+    "Space": [
+      "\u23b5",
+      "\u2423"
+    ],
+    "Symbol": "\ud83d\udd23",
+    "Tab": [
+      "↹",
+      "⇥",
+      "⇆",
+      "⇤"
+    ]
+  },
+  "LayoutKeys": {
+    "Alphabet": [
+      "\ud83d\udd20",
+      "\ud83d\udd20"
+    ],
+    "Keyboard": "\u2328",
+    "Number": "\ud83d\udd22",
+    "Symbol": "\ud83d\udd23",
+    "GruppenUmschaltung": "⇨"
+  },
+  "Modifiers": {
+    "Alt": [
+      "Alt",
+      "⌥"
+    ],
+    "AltGraph": "Alt Gr",
+    "CapsLock": [
+      "\u21ea",
+      "\u21eb",
+      "⇩"
+    ],
+    "Control": "Ctrl",
+    "Fn": "Fn",
+    "FnLock": "FnLock",
+    "Hyper": "Hyper",
+    "Meta": "\u2318",
+    "NumLock": "\ud83d\udd22",
+    "ScrollLock": "ScrollLock",
+    "Shift": [
+      "\u21e7",
+      "⇧"
+    ],
+    "Super": "Super",
+    "Symbol": "\ud83d\udd23",
+    "SymbolLock": "SymbolLock"
+  },
+  "info": [
+    "Super,OS,Meta,Win"
+    // C → c (lower case — first level)
+    // ⇧ Shift+C → C (upper case — second level)
+    // AltGr+C → © (copyright sign — third level)
+    // AltGr+⇧ Shift+C → ¢ (cent sign — fourth level)
+  ]
+}

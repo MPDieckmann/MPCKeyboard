@@ -1561,7 +1561,7 @@ var MPCKeyboard;
         // Bereitstellung der Keys
         // Bestückung mit Keys
         // Bestückung der Keys
-        Layout.version = "2019.10.24";
+        Layout.version = "2020.02.22";
         Layout.element = MPCKeyboard.Helper.createMPCElement("mpc:layout");
         Layout.style = MPCKeyboard.Helper.createHTMLElement("mpc:style");
         Layout.keys = Object.create(null);
@@ -2210,12 +2210,16 @@ var MPCKeyboard;
             if (_key || _touchId !== null && MPCKeyboard.Helper.isTouchEvent(event) && event.touches.length > 1) {
                 return;
             }
-            if (event.target instanceof MPCKeyElement) {
+            var target = event.target;
+            while (target && (target instanceof MPCKeyElement) === false) {
+                target = target.parentElement;
+            }
+            if (target instanceof MPCKeyElement) {
                 _key = {
-                    code: event.target.code,
-                    key: event.target.key,
-                    location: event.target.location,
-                    rect: event.target.getBoundingClientRect()
+                    code: target.code,
+                    key: target.key,
+                    location: target.location,
+                    rect: target.getBoundingClientRect()
                 };
                 keyDown(_key);
                 if (MPCKeyboard.Helper.isTouchEvent(event)) {
@@ -2276,9 +2280,21 @@ var MPCKeyboard;
 (function (MPCKeyboard) {
     var Menu;
     (function (Menu) {
-        Menu.version = "2019.10.21";
+        Menu.version = "2020.02.22";
         Menu.element = MPCKeyboard.Helper.createMPCElement("mpc:menus");
-        Menu.element.addEventListener("click", event => {
+        Menu.element.addEventListener("mousedown", event => {
+            event.preventDefault();
+            while (Menu.element.firstChild) {
+                Menu.element.removeChild(Menu.element.firstChild);
+            }
+        });
+        Menu.element.addEventListener("touchstart", event => {
+            event.preventDefault();
+            while (Menu.element.firstChild) {
+                Menu.element.removeChild(Menu.element.firstChild);
+            }
+        });
+        Menu.element.addEventListener("pointerdown", event => {
             event.preventDefault();
             while (Menu.element.firstChild) {
                 Menu.element.removeChild(Menu.element.firstChild);
@@ -2337,7 +2353,15 @@ var MPCKeyboard;
         }
         function createMenuItem(menuitem) {
             let element = MPCKeyboard.Helper.createMPCElement("mpc:menuitem");
-            element.addEventListener("click", event => {
+            element.addEventListener("mousedown", event => {
+                event.preventDefault();
+                menuitem.onclick();
+            });
+            element.addEventListener("touchstart", event => {
+                event.preventDefault();
+                menuitem.onclick();
+            });
+            element.addEventListener("pointerdown", event => {
                 event.preventDefault();
                 menuitem.onclick();
             });
