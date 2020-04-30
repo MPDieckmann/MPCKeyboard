@@ -6,7 +6,7 @@
   "main": "ts/mpckeyboard.init.ts",
   "dependencies": {
     "@types/jquery": "^3.3.31",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "directories": {
     "test": "test"
